@@ -9,6 +9,27 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+ behaviors {
+        hm_rick: hmrick {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMRICK";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <175>; // triggers the hold behavior when the tapping-term-ms has expired
+            quick-tap-ms = <150>; // If you press a tapped hold-tap again within quick-tap-ms milliseconds of the first press, it will always trigger the tap behavior.
+            require-prior-idle-ms = <185>; // like quick-tap-ms however it will apply for any non-modifier key pressed before it
+        };
+            as: auto_shift {
+                compatible = "zmk,behavior-hold-tap";
+                label = "AUTO_SHIFT";
+                #binding-cells = <2>;
+                tapping_term_ms = <350>;
+                quick_tap_ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+    };
         keymap {
                 compatible = "zmk,keymap";
 

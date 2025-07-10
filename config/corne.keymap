@@ -87,15 +87,9 @@
             bindings = <
 &kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR      &kp PRCNT    &kp CARET  &kp AMPS      &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &kp N1    &kp N2  &kp N3    &kp N4        &kp N5       &kp N6     &kp N7        &kp N8           &kp N9    &kp N0    &kp GRAVE
-&kp LSHFT  &kp       &kp     &kp       &kp LS(LBKT)  &kp LBKT     &kp RBKT   &kp RS(RBKT)  &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &kp           &kp SPACE    &kp RET    &kp           &kp RALT
+&kp LSHFT  &trans    &trans  &trans    &kp LS(LBKT)  &kp LBKT     &kp RBKT   &kp RS(RBKT)  &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+                             &kp LGUI  &trans        &kp SPACE    &kp RET    &trans        &kp RALT
             >;
         };
-
-        extra_1 { status = "reserved"; };
-
-        extra_2 { status = "reserved"; };
-
-        extra_3 { status = "reserved"; };
     };
 };
